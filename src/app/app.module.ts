@@ -18,25 +18,25 @@ import { CustomersDeleteComponent } from './components/customers/customers-delet
 import { CustomersUpdateComponent } from './components/customers/customers-update/customers-update.component';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    CustomersComponent,
     ProductsComponent,
     CountriesComponent,
     SalesComponent,
     CostsComponent,
-    ProductsComponent,
     CustomersComponent,
     ChannelsComponent,
     TimesComponent,
     PromotionsComponent,
-    CustomersListComponent,
+     CustomersListComponent,
     CustomersHeaderComponent,
     CustomersAddComponent,
     CustomersDeleteComponent,
     CustomersUpdateComponent
-  ],
+   
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
