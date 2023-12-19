@@ -1,20 +1,16 @@
 export class CountriesModel {
+ 
 
-
-
-    public  countryId:Number,
-
-         public  countryIsoCode:String,
-         public  countryName:String,
-
-         public countrySubregion: String,
-
-         public  countrySubregionId :Number,
-         public  countryRegion : String ,
-
-         public  countryRegionId:Number,
-
-         public  countryTotal : String,
-
-         public  countryTotalId:Number, 
-}
+  
+     constructor(
+        public countryId:number,
+        public countryIsoCode:string,
+        public countryName:string,
+        public countrySubregion:string,
+        public countrySubregionId:number,
+        public countryRegion:string,
+        public countryRegionId:number,
+        public countryTotal:string,
+        public countryTotalId:number,
+    ){}
+ }

@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: beige;
+  }
+  
+  .search-container {
+    text-align: left;
+  }
+  
+  input {
+    width: 100%; /* Set input width to 100% */
+    padding: 8px;
+    margin: 5px;
+    background-color: #edede6;
+  }
+  
+  button {
+    padding: 8px 15px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #933d8a;
+    color: white;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  button:hover {
+    background-color: #70dc31;
+  }
+  
+  .heading{
+    font-family: sans-serif;
+    font-size: xx-large;
+    font-weight: 500;
+    font-style:normal;
+    color: crimson;
+    padding-top: 30px;
+    text-align: center;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-family: 'Arial', sans-serif; /* Choose your preferred font */
+    background-color: #f0f0f0; /* Set your desired background color */
+    margin-top: 40px;
+  }
+
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  th {
+    background-color: #4CAF50; /* Set your desired header background color */
+    color: white;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Set your desired alternating row background color */
+  }
+
+  tbody tr:hover {
+    background-color: #f0f0f0; /* Set your desired background color for hover effect */
+  }

@@ -11,13 +11,10 @@ import { CustomersComponent } from './components/customers/customers.component';
 import { ChannelsComponent } from './components/channels/channels.component';
 import { TimesComponent } from './components/times/times.component';
 import { PromotionsComponent } from './components/promotions/promotions.component';
-import { CustomersListComponent } from './components/customers/customers-list/customers-list.component';
-import { CustomersHeaderComponent } from './components/customers/customers-header/customers-header.component';
 import { CustomersAddComponent } from './components/customers/customers-add/customers-add.component';
-import { CustomersDeleteComponent } from './components/customers/customers-delete/customers-delete.component';
-import { CustomersUpdateComponent } from './components/customers/customers-update/customers-update.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { CustomerListComponent } from './components/customers/customer-list/customer-list.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,19 +27,18 @@ import { HttpClientModule } from '@angular/common/http';
     ChannelsComponent,
     TimesComponent,
     PromotionsComponent,
-     CustomersListComponent,
-    CustomersHeaderComponent,
     CustomersAddComponent,
-    CustomersDeleteComponent,
-    CustomersUpdateComponent
-   
-   ],
+    CustomerListComponent
+    
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,43 +1,30 @@
-export class CustomersModel {
+import { CountriesModel } from "./countries-model";
 
-
-
+export class CustomersModel { 
     constructor(
-       
-	 	public  customerId:any,
-         public  firstName: String,
-         public  lastName:String,
-         public  gender: any,
-         public  yearOfBirth:Number,
-         public  maritalStatus:String,
-         public  streetAddress:String,
-         public  postalCode: String,
-         public  city: String,
-         public cityId: Number ,
-         public  stateProvince: String,
-         public  stateProvinceId:Number,
-         
-         public  countryId:Number,
+        public customerId:number,
+        public firstName:string,
+        public lastName:string,
+        public gender:string,
+        public yearOfBirth:number,
+        public maritalStatus:string,
+        public streetAddress:string,
+        public postalCode:string,
+        public city:string,
+        public cityId:number,
+        public stateProvince:string,
+        public stateProvinceId:number,
+        public country:CountriesModel,
+        public mainPhone:string,
+        public income:string,
+        public creditLimit:number,
+        public email:string,
+        public total:string,
+        public totalId:number,
+        public srcId:number,
+        public effectiveFrom:Date,
+        public effectiveTo:Date,
+        public valid:Date,
+    ){}
 
-         public  countryIsoCode:String,
-         public  countryName:String,
-
-         public countrySubregion: String,
-
-         public  countrySubregionId :Number,
-         public  countryRegion : String ,
-
-         public  countryRegionId:Number,
-
-         public  countryTotal : String,
-
-         public  countryTotalId:Number, 
-         public  mainPhone: String,
-         public  income: String,
-         public creditLimit:Number,
-         public  email: String
-        
- 
-        ) {}
-    
 }

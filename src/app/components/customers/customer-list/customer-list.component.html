@@ -1,0 +1,107 @@
+<div class="button">
+  <div>
+    <button routerLink="/customersadd">Add Customer</button>
+  </div>
+
+  <h1 class="heading">Welcome to Customer's Detail Page</h1>
+  <div class="search-container">
+    <div>
+      <button (click)="searchCustomer()">Enter Name Here</button>
+      <input
+        type="text"
+        placeholder="Search Customer's Deatil by Entering Name"
+        [(ngModel)]="searchText"
+      />
+    </div>
+
+    <div>
+      <button (click)="searchCustomerByCity()">Enter City Here</button>
+
+      <input
+        type="text"
+        placeholder="Search Customer's Deatil by Entering City"
+        [(ngModel)]="searchCity"
+      />
+    </div>
+
+    <div>
+      <button (click)="searchCustomerByIncome()">Enter Income Here</button>
+      <input
+        type="text"
+        placeholder="Search Customer's Deatil by Entering Income"
+        [(ngModel)]="searchIncome"
+      />
+    </div>
+
+    <div>
+      <button (click)="searchByCreditLimit()">Enter CreditLimit Here</button>
+      <input
+        type="number"
+        placeholder="Search Customer's Deatil by Entering CreditLimit"
+        [(ngModel)]="BycreditLimit"
+      />
+    </div>
+  </div>
+
+  <br /><br />
+
+  <table class="table mt-3">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Gender</th>
+        <th scope="col">YearOfBirth</th>
+        <th scope="col">MaritalStatus</th>
+        <th scope="col">StreetAddress</th>
+        <th scope="col">PostalCode</th>
+        <th scope="col">City</th>
+        <th scope="col">CityId</th>
+        <th scope="col">StateProvince</th>
+        <th scope="col">StateProvinceId</th>
+        <th scope="col">CountryId</th>
+        <th scope="col">CountryIsoCode</th>
+        <th scope="col">CountryName</th>
+        <th scope="col">CountrySubregion</th>
+        <th scope="col">MainPhone</th>
+        <th scope="col">Income</th>
+        <th scope="col">CreditLimit</th>
+        <th scope="col">Email</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ep of emp">
+        <td>{{ ep?.customerId }}</td>
+        <td>{{ ep?.firstName }}</td>
+        <td>{{ ep?.lastName }}</td>
+        <td>{{ ep?.gender }}</td>
+        <td>{{ ep?.yearOfBirth }}</td>
+        <td>{{ ep?.maritalStatus }}</td>
+        <td>{{ ep?.streetAddress }}</td>
+        <td>{{ ep?.postalCode }}</td>
+        <td>{{ ep?.city }}</td>
+        <td>{{ ep?.cityId }}</td>
+        <td>{{ ep?.stateProvince }}</td>
+        <td>{{ ep?.stateProvinceId }}</td>
+        <td>{{ ep?.country?.countryId }}</td>
+        <td>{{ ep?.country?.countryIsoCode }}</td>
+        <td>{{ ep?.country?.countryName }}</td>
+        <td>{{ ep?.country?.countrySubregion }}</td>
+        <td>{{ ep?.mainPhone }}</td>
+        <td>{{ ep?.income }}</td>
+        <td>{{ ep?.creditLimit }}</td>
+        <td>{{ ep?.email }}</td>
+        <td>
+          <button
+            (click)="deleteACustomers(ep.customerId)"
+            class="btn btn-info"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

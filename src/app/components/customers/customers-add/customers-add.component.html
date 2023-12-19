@@ -1,1 +1,312 @@
-<p>customers-add works!</p>
+
+<div class="button">
+  <div>
+    <button type="button" [routerLink]="['']">Customer</button>
+  </div>
+
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-7">
+        <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+          <div class="card">
+            <div class="card-header bg-success text-white">
+              <h2 class="text-center">Add New Customer</h2>
+            </div>
+
+            <div class="card-body">
+              <!-- First Name Input -->
+
+              <div class="form-group mb-3">
+                <label for="firstName">First Name</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  formControlName="firstName"
+                  required
+                />
+              </div>
+
+              <!-- Last Name Input -->
+
+              <div class="form-group mb-3">
+                <label for="lastName">Last Name</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  formControlName="lastName"
+                  required
+                />
+              </div>
+
+              <!-- Gender Input -->
+
+              <div class="form-group mb-3">
+                <label for="gender">Gender</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="gender"
+                  formControlName="gender"
+                  required
+                />
+              </div>
+
+              <!-- Year of Birth Input -->
+
+              <div class="form-group mb-3">
+                <label for="yearOfBirth">Year of Birth</label>
+
+                <input
+                  type="number"
+                  class="form-control"
+                  id="yearOfBirth"
+                  formControlName="yearOfBirth"
+                  required
+                />
+              </div>
+
+              <!-- Marital Status Input -->
+
+              <div class="form-group mb-3">
+                <label for="maritalStatus">Marital Status</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="maritalStatus"
+                  formControlName="maritalStatus"
+                  required
+                />
+              </div>
+
+              <!-- Street Address Input -->
+
+              <div class="form-group mb-3">
+                <label for="streetAddress">Street Address</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="streetAddress"
+                  formControlName="streetAddress"
+                  required
+                />
+              </div>
+
+              <!-- Postal Code Input -->
+
+              <div class="form-group mb-3">
+                <label for="postalCode">Postal Code</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="postalCode"
+                  formControlName="postalCode"
+                  required
+                />
+              </div>
+
+              <!-- City Input -->
+
+              <div class="form-group mb-3">
+                <label for="city">City</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="city"
+                  formControlName="city"
+                  required
+                />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="cityId">City Id</label>
+
+                <input
+                  type="number"
+                  class="form-control"
+                  id="cityId"
+                  formControlName="cityId"
+                  required
+                />
+              </div>
+
+              <!-- State Province Input -->
+
+              <div class="form-group mb-3">
+                <label for="stateProvince">State Province</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="stateProvince"
+                  formControlName="stateProvince"
+                  required
+                />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="stateProvinceId">State Province Id</label>
+
+                <input
+                  type="number"
+                  class="form-control"
+                  id="stateProvinceId"
+                  formControlName="stateProvinceId"
+                  required
+                />
+              </div>
+
+              <!-- Country Selection -->
+              <div formGroupName="country">
+                <div class="form-group mb-3">
+                  <label for="country">Country</label>
+
+                  <select
+                    class="form-control"
+                    id="country"
+                    formControlName="countryId"
+                    required
+                  >
+                    <option
+                      *ngFor="let country of countries"
+                      [value]="country.countryId"
+                    >
+                      {{ country.countryId }} - {{ country.countryName }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Main Phone Input -->
+
+              <div class="form-group mb-3">
+                <label for="mainPhone">Main Phone</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="mainPhone"
+                  formControlName="mainPhone"
+                  required
+                />
+              </div>
+
+              <!-- Income Input -->
+
+              <div class="form-group mb-3">
+                <label for="income">Income</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="income"
+                  formControlName="income"
+                  required
+                />
+              </div>
+
+              <!-- Credit Limit Input -->
+
+              <div class="form-group mb-3">
+                <label for="creditLimit">Credit Limit</label>
+
+                <input
+                  type="number"
+                  class="form-control"
+                  id="creditLimit"
+                  formControlName="creditLimit"
+                  required
+                />
+              </div>
+
+              <!-- Email Input -->
+
+              <div class="form-group mb-3">
+                <label for="email">Email</label>
+
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  formControlName="email"
+                  required
+                />
+              </div>
+
+              <!-- Total Input -->
+
+              <div class="form-group mb-3">
+                <label for="total">Total</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="total"
+                  formControlName="total"
+                  required
+                />
+              </div>
+
+              <!-- Effective From Input -->
+
+              <div class="form-group mb-3">
+                <label for="effectiveFrom">Effective From</label>
+
+                <input
+                  type="date"
+                  class="form-control"
+                  id="effectiveFrom"
+                  formControlName="effectiveFrom"
+                  required
+                />
+              </div>
+
+              <!-- Effective To Input -->
+
+              <div class="form-group mb-3">
+                <label for="effectiveTo">Effective To</label>
+
+                <input
+                  type="date"
+                  class="form-control"
+                  id="effectiveTo"
+                  formControlName="effectiveTo"
+                  required
+                />
+              </div>
+
+              <!-- Valid Input -->
+
+              <div class="form-group mb-3">
+                <label for="valid">Valid</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="valid"
+                  formControlName="valid"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="d-grid m-3">
+              <button type="submit" class="btn btn-success">
+                Add Customer
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- [disabled]="customerForm.invalid" -->
+</div>
